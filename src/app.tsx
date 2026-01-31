@@ -1,14 +1,18 @@
+import { ConnectButton } from "@mysten/dapp-kit-react";
+import { UsdcSection } from "./components/usdc-section";
+
 export function App() {
   return (
-    <div className="min-h-screen bg-background bg-grid">
-      <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur">
-        <div className="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+    <div className="bg-background bg-grid min-h-screen">
+      <header className="bg-background/80 sticky top-0 z-50 border-b backdrop-blur">
+        <div className="mx-auto flex max-w-4xl items-center justify-between px-4 py-3">
           <h1 className="font-bold">Sui Workshop</h1>
+          <ConnectButton />
         </div>
       </header>
 
-      <main className="max-w-4xl mx-auto px-4 py-6">
-        <span>Start Here!</span>
+      <main className="mx-auto max-w-4xl px-4 py-6">
+        <UsdcSection />
       </main>
     </div>
   );
